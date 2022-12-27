@@ -32,7 +32,7 @@ Route::get('/deleteUser/{id}',[AdminController::class,'deleteUser']);
 
 Route::get('/redirects',[HomeController::class,'redirects']);
 
-
+Route::post('/reservation',[AdminController::class,'reservation']);
 
 
 Route::middleware([
