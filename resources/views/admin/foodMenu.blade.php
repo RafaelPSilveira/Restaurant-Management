@@ -41,6 +41,34 @@
                     <button type="submit" value="Save" class="btn btn-primary">Submit</button>
 
                   </form>
+
+                  <div id="tableFood" class="container-fluid p-5">
+                    <table class="table" style="color:aliceblue">
+                        <thead>
+                            <tr>
+                                <th>Food Name</th>
+                                <th>Price</th>
+                                <th>Description</th>
+                                <th>Image</th>
+                                <th>Action</th>
+                                <th>Action2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach ($data as $data)
+                                <tr>
+                                    <td>{{ $data->title }}</td>
+                                    <td>{{ $data->price }}</td>
+                                    <td>{{ $data->description }}</td>
+                                    <td><img src="/foodImage/{{ $data->image }}"></td>
+                                    <td><a href="{{ url('/deleteMenu',$data->id) }}">Delete</a></td>
+                                    <td><a href="{{ url('/updateView',$data->id) }}">update</a></td>
+                                </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 

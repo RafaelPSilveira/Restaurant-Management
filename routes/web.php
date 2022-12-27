@@ -20,11 +20,19 @@ Route::get('/users',[AdminController::class,'user']);
 
 Route::get('/foodMenu',[AdminController::class,'foodMenu']);
 
+Route::get('/deleteMenu/{id}',[AdminController::class,'deleteMenu']);
+
 Route::post('/uploadFood',[AdminController::class,'uploadFood']);
+
+Route::post('/updateFood/{id}',[AdminController::class,'updateFood']);
+
+Route::get('/updateView/{id}',[AdminController::class,'updateView']);
 
 Route::get('/deleteUser/{id}',[AdminController::class,'deleteUser']);
 
 Route::get('/redirects',[HomeController::class,'redirects']);
+
+
 
 
 Route::middleware([
