@@ -34,6 +34,13 @@ Route::get('/redirects',[HomeController::class,'redirects']);
 
 Route::post('/reservation',[AdminController::class,'reservation']);
 
+Route::get('/viewReservation',[AdminController::class,'viewReservation']);
+
+Route::get('/viewChef',[AdminController::class,'viewChef']);
+
+Route::post('/uploadChef',[AdminController::class,'uploadChef']);
+
+
 
 Route::middleware([
     'auth:sanctum',

@@ -6,12 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Food;
+use App\Models\FoodChef;
 
 class HomeController extends Controller
 {
-   public function index(){
+   public function index()
+   {
     $data = food::all();
-    return view ('home', compact("data"));
+    $data2 = foodChef::all();
+    return view ('home', compact('data','data2'));
    }
 
    public function redirects(){
